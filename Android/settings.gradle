@@ -1,0 +1,7 @@
+/*
+ * Created by Yip Tsz To on 11/2/19 4:18 AM.
+ * Copyright (c) 2019.
+ */
+
+include ':app'
+rootProject.name='Code4Good'

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Yip Tsz To on 11/2/19 4:18 AM.
+  ~ Copyright (c) 2019.
+  -->
+
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="org.ytt.code4good.viewModels.ChatViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <org.ytt.code4good.CircleImageView
+            android:id="@+id/view_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:scaleType="fitXY"
+            android:src="@{viewModel.getDrawable}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/head_placeholder" />
+
+        <TextView
+            android:id="@+id/view_text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:text="@{viewModel.name}"
+            android:textColor="@color/text_blue"
+            android:textSize="25sp"
+            app:layout_constraintStart_toEndOf="@id/view_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Lisa" />
+
+        <TextView
+            android:id="@+id/view_text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.time}"
+            android:textColor="@color/text_blue"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="4:30 pm" />
+
+        <TextView
+            android:id="@+id/view_text_detail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.detail}"
+            android:textColor="@color/text_blue"
+            android:textSize="15sp"
+            app:layout_constraintStart_toStartOf="@id/view_text_name"
+            app:layout_constraintTop_toBottomOf="@id/view_text_name"
+            tools:text="You two just played the Category game!" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

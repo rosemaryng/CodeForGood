@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/flowerybackground"
+    tools:context=".GameDraw">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <TextView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:keepScreenOn="true"
+        android:text=""
+        android:textColor="#33b5e5"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+    <TextView
+        android:id="@+id/drawSomething"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:text="Draw a pizza!"
+        android:textSize="24pt"
+        app:layout_constraintBottom_toBottomOf="@+id/fullscreen_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--    <EditText-->
+<!--        android:id="@+id/answerText"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:clickable="true"-->
+<!--        android:ems="10"-->
+<!--        android:hint="What is the object?"-->
+<!--        android:imeOptions="actionDone"-->
+<!--        android:inputType="textCapWords"-->
+<!--        android:text=""-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/categoryText"-->
+<!--        app:layout_constraintVertical_bias="0.682"-->
+<!--        tools:ignore="MissingConstraints, ContentDescription\" />-->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/fullscreen_content_controls"
+        style="?metaButtonBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/black_overlay"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/fullscreen_content"
+        app:layout_constraintTop_toTopOf="@+id/fullscreen_content"
+        tools:ignore="UselessParent">
+
+        <org.ytt.code4good.PaintView
+            android:id="@+id/paintView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.666" />
+
+        <Button
+            android:id="@+id/done"
+            style="?metaButtonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="casual"
+            android:text="Done"
+            android:onClick="onClick"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.885" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

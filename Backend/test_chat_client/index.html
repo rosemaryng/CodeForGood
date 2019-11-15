@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Test Client</title>
+
+  <style>
+    body {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .container {
+      margin: auto;
+      width: 90%;
+    }
+
+    .bubble {
+      width: 50%;
+      border: 1px solid;
+      border-radius: 2px;
+      padding: 5px;
+      margin: 20px;
+    }
+
+    .self {
+      margin-left: 40%;
+      border-color: rgb(22, 20, 20);
+    }
+
+    .other {
+      border-color: blue;
+    }
+
+    #window {
+      height: 90vh;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div>
+      <input type="text" id="nameBox" placeholder="Name" />
+      <button id="nameBtn">Update</button>
+    </div>
+    <div id="window">
+
+    </div>
+
+    <input type="text" id="message" placeholder="Message" />
+    <button id="sendBtn">Send</button>
+  </div>
+
+
+  <script src="socket.io.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Yip Tsz To on 11/2/19 4:18 AM.
+  ~ Copyright (c) 2019.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_task"
+        android:enabled="true"
+        android:icon="@drawable/ic_nav_task"
+        android:title="Tasks"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_game"
+        android:enabled="true"
+        android:icon="@drawable/ic_nav_game"
+        android:title="Games"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_chat"
+        android:enabled="true"
+        android:icon="@drawable/ic_nav_chat"
+        android:title="Chat"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_room"
+        android:enabled="true"
+        android:icon="@drawable/ic_nav_room"
+        android:title="My Room"
+        app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Yip Tsz To on 11/2/19 7:31 AM.
+  ~ Copyright (c) 2019.
+  -->
+
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <solid android:color="#ffffff" />
+    <corners android:radius="32dp" />
+    <padding
+        android:bottom="8dp"
+        android:left="8dp"
+        android:right="8dp"
+        android:top="8dp" />
+</shape>

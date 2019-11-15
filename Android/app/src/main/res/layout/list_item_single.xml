@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Yip Tsz To on 11/2/19 4:18 AM.
+  ~ Copyright (c) 2019.
+  -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/view_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="8dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Action" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Yip Tsz To on 11/2/19 4:18 AM.
+  ~ Copyright (c) 2019.
+  -->
+
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="org.ytt.code4good.viewModels.TaskViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/view_cb"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.name}"
+            android:textColor="@color/text_blue"
+            android:textSize="32sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/linear"
+            app:layout_constraintStart_toEndOf="@id/view_cb"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+"
+                android:textColor="@color/text_blue"
+                android:textSize="50sp" />
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:src="@drawable/coin" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.coins}"
+                android:textColor="@color/text_blue"
+                android:textSize="50sp"
+                tools:text="10" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

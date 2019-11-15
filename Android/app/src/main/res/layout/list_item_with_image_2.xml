@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Yip Tsz To on 11/2/19 4:18 AM.
+  ~ Copyright (c) 2019.
+  -->
+
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="org.ytt.code4good.viewModels.GameViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/view_image"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:scaleType="fitXY"
+            android:src="@{viewModel.getDrawable}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_game_ninja" />
+
+        <TextView
+            android:id="@+id/view_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@{viewModel.name}"
+            android:textColor="@color/text_blue"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/view_image"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1. Ninja Fight" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@{viewModel.category}"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@id/view_title"
+            app:layout_constraintTop_toBottomOf="@id/view_title"
+            tools:text="Action" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:src="@drawable/ic_game_challenge"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
